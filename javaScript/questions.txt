@@ -1,2 +1,5 @@
 1. Difference between var, let and const?
 
+2. What is the difference between null and undefined?
+
+3.What is Hoisting ?
