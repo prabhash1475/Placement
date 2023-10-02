@@ -3,3 +3,7 @@
 2. What is the difference between null and undefined?
 
 3.What is Hoisting ?
+
+4.What is promises with examples ?
+
+5. What is callback ?
