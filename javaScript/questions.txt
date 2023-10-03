@@ -7,3 +7,5 @@
 4.What is promises with examples ?
 
 5. What is callback ?
+
+6. What is closures with exaples ?
