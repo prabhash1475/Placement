@@ -1,0 +1,25 @@
+.first::before {
+  content: "click me";
+  color: red;
+}
+.main {
+  border: 1px solid teal;
+  display: flex;
+  height: 150px;
+  width: 50%;
+  margin: auto;
+  position: relative;
+}
+.main > div {
+  height: 40px;
+  width: 30px;
+  margin: 5px;
+  border: 1px solid red;
+}
+.third {
+  position: absolute;
+  /* top: 50px; */
+  /* left: 30px; */
+  /* right: 60px; */
+  bottom: 10px;
+}
