@@ -14,3 +14,4 @@
 
 8. What is difference between foreach and map?
 
+9. What is this in js
