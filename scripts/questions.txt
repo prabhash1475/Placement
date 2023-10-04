@@ -11,3 +11,6 @@
 6. What is closures with exaples ?
 
 7. Event loop
+
+8. What is difference between foreach and map?
+
