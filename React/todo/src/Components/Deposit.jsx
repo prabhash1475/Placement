@@ -21,13 +21,23 @@ export const Deposit = () => {
   useEffect(() => {
     // alert("Inside Side");
     setLoading(true);
+    setErr(false);
     console.log("Inside");
-    getPost().then((res) => {
-      //   console.log(res);
-      setPost(res);
+
+    setTimeout(() => {
+      console.log("1000");
+      getPost()
+        .then((res) => {
+          //   console.log(res);
+          setPost(res);
+          setLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+          setErr(true);
+        });
       setLoading(false);
-    });
-    setLoading(false);
+    }, 10000);
   }, []);
   //   alert("Out Side After");
   console.log("After");
@@ -35,14 +45,14 @@ export const Deposit = () => {
   return (
     <>
       {loading && <div>Loading...</div>}
-      <h3>ATM</h3>
+      {/* <h3>ATM</h3>
       <h4>{amount}</h4>
       <div>
         <button onClick={handleDeposit}>Deposit 100</button>
       </div>
       <div>
         <button onClick={() => setAmount(amount - 100)}>Withdraw 100</button>
-      </div>
+      </div> */}
       {post.map((el) => {
         return (
           <ul>
