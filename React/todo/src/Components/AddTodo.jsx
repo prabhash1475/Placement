@@ -5,7 +5,7 @@ export const AddTodo = ({ handleAddTodo }) => {
 
   const handleChange = (e) => {
     setText(e.target.value);
-    console.log(text);
+    // console.log(text);
   };
   const onClick = () => {
     handleAddTodo(text);
