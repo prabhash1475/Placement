@@ -55,7 +55,7 @@ export const Deposit = () => {
       </div> */}
       {post.map((el) => {
         return (
-          <ul>
+          <ul key={el.id}>
             <li>
               {" "}
               <div>{el.title}</div>
