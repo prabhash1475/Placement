@@ -8,15 +8,16 @@ const formatTimeToString = (time) => {
   const second = time % 60;
   const minute = Math.floor(time / 60) % 60;
   const hour = Math.floor(time / 3600) % 60;
-  const outputOutputString = `${fixTimeString(hour)}:${fixTimeString(
+  const outputString = `${fixTimeString(hour)}:${fixTimeString(
     minute
   )}:${fixTimeString(second)}`;
 
-  return outputOutputString;
+  return outputString;
 };
 
 export const Stopwatch = () => {
   const [timer, setTimer] = useState(0);
+  const [splits, setSplits] = useState([]);
   const ref = useRef(null);
 
   const startStopwatch = () => {
@@ -46,12 +47,31 @@ export const Stopwatch = () => {
     setTimer(0);
   };
 
+  //   split
+
+  const splitTime = () => {
+    setSplits((prevSplits) => [...prevSplits, formatTimeToString(timer)]);
+  };
+
   return (
     <>
       <h1>{formatTimeToString(timer)}</h1>
       <button onClick={startStopwatch}>Start</button>
       <button onClick={pauseStopwatch}>Pause</button>
       <button onClick={resetStopwatch}>Reset</button>
+
+      {/* split */}
+      <button onClick={splitTime}>Split</button>
+      {splits.length > 0 && (
+        <>
+          <h1>Splits</h1>
+          <ol>
+            {splits.map((split, index) => (
+              <li key={index}>{split}</li>
+            ))}
+          </ol>
+        </>
+      )}
     </>
   );
 };
