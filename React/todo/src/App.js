@@ -5,15 +5,28 @@ import { Todo } from "./Components/Todo";
 import { Deposit } from "./Components/Deposit";
 import { Getpost } from "./day7/Getpost";
 import { Useeffect } from "./day7/Useefferct";
+import { SmallTimer } from "./day7/SmallTimer";
+import { useState } from "react";
+import { UseRef } from "./day8/UseRef";
+import { Stopwatch } from "./day8/Stopwatch";
 
 function App() {
+  // const [showTimer, setShowTimer] = useState(true);
   return (
     <div className="App">
       {/* <Counter /> */}
       {/* <Todo /> */}
       {/* <Deposit /> */}
       {/* <Getpost /> */}
-      <Useeffect />
+      {/* <Useeffect /> */}
+
+      {/* {showTimer && <SmallTimer />} */}
+      {/* <button onClick={() => setShowTimer(!showTimer)}>
+        {showTimer ? "Hide Timer" : "Show Timer"}{" "}
+      </button> */}
+      {/* day8 */}
+      {/* <UseRef /> */}
+      <Stopwatch />
     </div>
   );
 }
