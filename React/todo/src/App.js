@@ -9,6 +9,7 @@ import { SmallTimer } from "./day7/SmallTimer";
 import { useState } from "react";
 import { UseRef } from "./day8/UseRef";
 import { Stopwatch } from "./day8/Stopwatch";
+import { StopwatchDicent } from "./day8/StopwatchDicent";
 
 function App() {
   // const [showTimer, setShowTimer] = useState(true);
@@ -26,7 +27,8 @@ function App() {
       </button> */}
       {/* day8 */}
       {/* <UseRef /> */}
-      <Stopwatch />
+      {/* <Stopwatch /> */}
+      <StopwatchDicent />
     </div>
   );
 }
